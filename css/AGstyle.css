@@ -1,0 +1,123 @@
+:root{
+    --hauteur-menu: 60px;  }
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+    background-color:#2C3639;
+  }
+  nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+  }
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px #A27B5C;
+    height: var(--hauteur-menu);
+  }
+   
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: #2a353600;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #DCD7C9;
+  }
+  
+  .menu-deroulant > a:after{
+    content: '❯';
+    font-size: 6%;
+    margin-left: 6px;
+    display: inline-block;
+  }
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: #546263c3;
+    border-color: #A27B5C;
+    border-radius: 7%;
+    overflow: hidden;
+    max-height: 0;
+  }
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    border-style: solid 3px;
+  
+  }
+  nav > ul > li:hover > a{
+    color: #DCD7C9;
+  }
+  .sous-menu > li:hover {
+    background-color: #2c363948;
+  }
+  
+  .sous-menu > li:hover > a {
+    color: #A27B5C;
+    }
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+    color:#A27B5C;
+  }
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 7px 1px rgba(0,0,0,0);
+      border-top: 1px solid #A27B5C;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 1px solid #A27B5C;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  
+}
+    .menu-deroulant:hover > .sous-menu {
+        animation: apparitionSousMenu 1s forwards;
+        color: #A27B5C;
+      }
+
+    .chart-container{
+        width: 70%;
+        margin:20px;
+        background-color:#dcd7c9eb;
+        margin-left: 12%;
+        border-color: #a27b5ce9;
+        border-style: solid;
+        background: linear-gradient(315deg, #c6c2b5, #6f6c63);
+        box-shadow:  -30px -30px 59px #44413b,
+             30px 30px 59px #313030;
+    }
+
